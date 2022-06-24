@@ -77,10 +77,11 @@ export const KontrolaButton = styled.div`
     cursor: pointer;
     align-content: center;
     background-color: #505050;
-   /* ${props => {
+   ${props => {
       if (props.checked == 1) {
          return `
          background-color: green;
+     
       `;
       }
       else if (props.checked == 2) {
@@ -88,7 +89,7 @@ export const KontrolaButton = styled.div`
          background-color: red;
       `;
       }
-   }} */
+   }}
 `;
 
 

@@ -19,7 +19,7 @@ const defaultObjednavka = {
   gravel: false,
   gravelPocet: 0,
 
-  doba: 0,
+  doba: 1,
 
   nosic: 1,
 
@@ -46,7 +46,11 @@ function setObjednavka(objednavka, action) {
   }
 }
 
+
 function App() {
+
+  const [finalPrice, setFinalPrice] = useState(0);
+  const [checked, setChecked] = useState(0);
 
   const [showFinalPrice, setShowFinalPrice] = useState(0);
 
@@ -74,9 +78,20 @@ function App() {
 
     let price = (detskeCena * objednavka.detskePocet + horskeCena * objednavka.horskePocet + silnicniCena * objednavka.silnicniPocet + gravelCena * objednavka.gravelPocet) * objednavka.doba * objednavka.nosic;
 
-   
+    setFinalPrice(price)
     return price;
   }
+
+  const checkPrice = (objednavka) => {
+    if (objednavka.rozpocet >= finalPrice) {
+      let checkOK = 1;
+      setChecked(checkOK);
+    } else {
+      let checkNOK = 2;
+      setChecked(checkNOK);
+    }
+  };
+
 
   return (
     <PageContainer>
@@ -229,16 +244,16 @@ function App() {
           <input type="text" id="finalniCena" value={showFinalPrice} disabled />
           <label>Zadejte váš rozpočet:</label>
           <input type="text" id="rozpocet" value={0} onChange />
-          {/* BUTTON PRO KONTROLU */}
+          {/* kontrola*/}
 
-          {/* <KontrolaButton checked={checked} onClick={() => {
+          <KontrolaButton checked={checked} onClick={() => {
             checkPrice(objednavka);
             console.log(checked);
 
 
           }}>
             Kontrola
-          </KontrolaButton> */}
+          </KontrolaButton>
         </FormSection>
       </Formular>
     </PageContainer>
