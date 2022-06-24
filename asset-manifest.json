@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/app-react-cviko/static/css/main.4792a309.css",
+    "main.js": "/app-react-cviko/static/js/main.3e94fc7c.js",
+    "static/js/787.46781ff8.chunk.js": "/app-react-cviko/static/js/787.46781ff8.chunk.js",
+    "index.html": "/app-react-cviko/index.html",
+    "main.4792a309.css.map": "/app-react-cviko/static/css/main.4792a309.css.map",
+    "main.3e94fc7c.js.map": "/app-react-cviko/static/js/main.3e94fc7c.js.map",
+    "787.46781ff8.chunk.js.map": "/app-react-cviko/static/js/787.46781ff8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4792a309.css",
+    "static/js/main.3e94fc7c.js"
+  ]
+}
