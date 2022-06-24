@@ -243,7 +243,14 @@ function App() {
           <label>Finální cena:</label>
           <input type="text" id="finalniCena" value={showFinalPrice} disabled />
           <label>Zadejte váš rozpočet:</label>
-          <input type="text" id="rozpocet" value={0} onChange />
+          <input type="text" id="rozpocet" value={objednavka.rozpocet} onChange={(e) => {
+              dispatch({
+                type: "toggle_number",
+                value: e.target.value,
+                key: "rozpocet",
+              });
+            }}
+           />
           {/* kontrola*/}
 
           <KontrolaButton checked={checked} onClick={() => {
