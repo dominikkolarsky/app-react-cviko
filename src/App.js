@@ -21,7 +21,7 @@ const defaultObjednavka = {
 
   doba: 0,
 
-  nosic: 0,
+  nosic: 1,
 
   finalCena: 0,
   rozpocet: 0,
@@ -74,8 +74,7 @@ function App() {
 
     let price = (detskeCena * objednavka.detskePocet + horskeCena * objednavka.horskePocet + silnicniCena * objednavka.silnicniPocet + gravelCena * objednavka.gravelPocet) * objednavka.doba * objednavka.nosic;
 
-
-
+   
     return price;
   }
 
@@ -191,7 +190,7 @@ function App() {
           <SectionTitle>Nosič</SectionTitle>
           <div>
             <InputDiv>
-              <input type="radio" name="nosic" id="nosicNe" value={0} onClick={(e) => {
+              <input type="radio" name="nosic" id="nosicNe" value={1} onClick={(e) => {
                 dispatch({
                   type: 'toggle_number',
                   value: e.target.value,
