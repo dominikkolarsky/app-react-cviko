@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/app-react-cviko/static/css/main.4792a309.css",
-    "main.js": "/app-react-cviko/static/js/main.e6ca0fc5.js",
+    "main.css": "/app-react-cviko/static/css/main.f539e7bc.css",
+    "main.js": "/app-react-cviko/static/js/main.1abb33fc.js",
     "static/js/787.46781ff8.chunk.js": "/app-react-cviko/static/js/787.46781ff8.chunk.js",
+    "static/media/bike.jpg": "/app-react-cviko/static/media/bike.b42e7b02031c86f4c2e5.jpg",
+    "static/media/detske.jpg": "/app-react-cviko/static/media/detske.4a55af2dbfb97a037f80.jpg",
+    "static/media/silnicni.jpg": "/app-react-cviko/static/media/silnicni.93d3d48c336685e8e3cc.jpg",
+    "static/media/elektro.jpg": "/app-react-cviko/static/media/elektro.12d62dc0609220fc547e.jpg",
+    "static/media/horske.jpg": "/app-react-cviko/static/media/horske.f6be8a1ae951da3e10e0.jpg",
     "index.html": "/app-react-cviko/index.html",
-    "main.4792a309.css.map": "/app-react-cviko/static/css/main.4792a309.css.map",
-    "main.e6ca0fc5.js.map": "/app-react-cviko/static/js/main.e6ca0fc5.js.map",
+    "main.f539e7bc.css.map": "/app-react-cviko/static/css/main.f539e7bc.css.map",
+    "main.1abb33fc.js.map": "/app-react-cviko/static/js/main.1abb33fc.js.map",
     "787.46781ff8.chunk.js.map": "/app-react-cviko/static/js/787.46781ff8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4792a309.css",
-    "static/js/main.e6ca0fc5.js"
+    "static/css/main.f539e7bc.css",
+    "static/js/main.1abb33fc.js"
   ]
 }
