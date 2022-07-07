@@ -1,7 +1,11 @@
-import './App.css';
-import { FormSection, Formular, InputDiv, KontrolaButton, MainTitle, PageContainer, SectionTitle } from './AppStyles';
+import { FormSection, FormSectionFlex, Formular, InputDiv, InputDivCol, KontrolaButton, MainTitle, PageContainer, SectionTitle } from './AppStyles';
 //
 import { useReducer, useState, useEffect } from 'react';
+
+import detske from './detske.jpg';
+import horske from './horske.jpg';
+import silnicni from './silnicni.jpg';
+import elektro from './elektro.jpg';
 
 // initial objednavka
 
@@ -100,89 +104,108 @@ function App() {
         {/* vyber kola a pocet kol */}
         <FormSection>
           <SectionTitle>Výběř typu kola:</SectionTitle>
-          <InputDiv>
-            <input type="checkbox" id="detske" onClick={(e) => {
-              dispatch({
-                type: 'toggle_detske',
-                value: e.target.value,
-                key: 'detske'
-              })
-            }} />
-            <label>dětské  200 Kč/den</label>
-          </InputDiv>
-          <InputDiv>
-            <label> počet kol:</label>
-            <input type="number" id="detskePocet" value={objednavka.detskePocet} onChange={(e) => {
-              dispatch({
-                type: "toggle_number",
-                value: e.target.value,
-                key: "detskePocet",
-              });
-            }} />
-          </InputDiv>
+          <FormSectionFlex>
+            {/* detske */}
+            <InputDivCol>
+              <img src={detske} style={{ height: '90px', width: 'auto' }} />
+              <InputDiv>
+                <input type="checkbox" id="detske" onClick={(e) => {
+                  dispatch({
+                    type: 'toggle_detske',
+                    value: e.target.value,
+                    key: 'detske'
+                  })
+                }} />
+                <label>dětské  200 Kč/den</label>
+              </InputDiv>
+              <InputDiv>
+                <input type="number" id="detskePocet" min="0" style={{ width: '3em' }} value={objednavka.detskePocet} onChange={(e) => {
+                  dispatch({
+                    type: "toggle_number",
+                    value: e.target.value,
+                    key: "detskePocet",
+                  });
+                }} />
+                <label> počet kol</label>
+              </InputDiv>
+            </InputDivCol>
 
-          <InputDiv>
-            <input type="checkbox" id="horske" onClick={(e) => {
-              dispatch({
-                type: 'toggle_horske',
-                value: e.target.value,
-                key: 'horske'
-              })
-            }} />
-            <label>horské 500 Kč/den</label>
-          </InputDiv>
-          <InputDiv>
-            <label> počet kol:</label>
-            <input type="number" id="horskePocet" value={objednavka.horskePocet} onChange={(e) => {
-              dispatch({
-                type: "toggle_number",
-                value: e.target.value,
-                key: "horskePocet",
-              });
-            }} />
-          </InputDiv>
+            {/* horske */}
+            <InputDivCol>
+            <img src={horske} style={{ height: '90px', width: 'auto'  }}/>
+              <InputDiv>
+                <input type="checkbox" id="horske" min="0" onClick={(e) => {
+                  dispatch({
+                    type: 'toggle_horske',
+                    value: e.target.value,
+                    key: 'horske'
+                  })
+                }} />
+                <label>horské 500 Kč/den</label>
+              </InputDiv>
+              <InputDiv>
+                <input type="number" id="horskePocet" min="0" style={{ width: '3em' }} value={objednavka.horskePocet} onChange={(e) => {
+                  dispatch({
+                    type: "toggle_number",
+                    value: e.target.value,
+                    key: "horskePocet",
+                  });
+                }} />
+                <label> počet kol</label>
+              </InputDiv>
+            </InputDivCol>
 
-          <InputDiv>
-            <input type="checkbox" id="silnicni" onClick={(e) => {
-              dispatch({
-                type: 'toggle_silnicni',
-                value: e.target.value,
-                key: 'silnicni'
-              })
-            }} />
-            <label>silniční 1500 Kč/den</label>
-          </InputDiv>
-          <InputDiv>
-            <label> počet kol:</label>
-            <input type="number" id="silnicniPocet" value={objednavka.silnicniPocet} onChange={(e) => {
-              dispatch({
-                type: "toggle_number",
-                value: e.target.value,
-                key: "silnicniPocet",
-              });
-            }} />
-          </InputDiv>
+            {/* silbicni */}
+            <InputDivCol>
+            <img src={silnicni} style={{ height: '90px', width: 'auto' }} />
+              <InputDiv>
+                <input type="checkbox" id="silnicni" min="0" onClick={(e) => {
+                  dispatch({
+                    type: 'toggle_silnicni',
+                    value: e.target.value,
+                    key: 'silnicni'
+                  })
+                }} />
+                <label>silniční 1500 Kč/den</label>
+              </InputDiv>
+              <InputDiv>
 
-          <InputDiv>
-            <input type="checkbox" id="gravel" onClick={(e) => {
-              dispatch({
-                type: 'toggle_gravel',
-                value: e.target.value,
-                key: 'gravel'
-              })
-            }} />
-            <label>gravel 2500 Kč/den</label>
-          </InputDiv>
-          <InputDiv>
-            <label> počet kol:</label>
-            <input type="number" id="gravelPocet" value={objednavka.gravelPocet} onChange={(e) => {
-              dispatch({
-                type: "toggle_number",
-                value: e.target.value,
-                key: "gravelPocet",
-              });
-            }} />
-          </InputDiv>
+                <input type="number" id="silnicniPocet" min="0" style={{ width: '3em' }} value={objednavka.silnicniPocet} onChange={(e) => {
+                  dispatch({
+                    type: "toggle_number",
+                    value: e.target.value,
+                    key: "silnicniPocet",
+                  });
+                }} />
+                  <label>počet kol</label>
+              </InputDiv>
+            </InputDivCol>
+
+            {/* elektro gravel */}
+            <InputDivCol>
+            <img src={elektro} style={{ height: '90px', width: 'auto'  }} />
+              <InputDiv>
+                <input type="checkbox" id="gravel" onClick={(e) => {
+                  dispatch({
+                    type: 'toggle_gravel',
+                    value: e.target.value,
+                    key: 'gravel'
+                  })
+                }} />
+                <label>elektro 2500 Kč/den</label>
+              </InputDiv>
+              <InputDiv>
+                <input type="number" id="gravelPocet" min="0" style={{ width: '3em' }} value={objednavka.gravelPocet} onChange={(e) => {
+                  dispatch({
+                    type: "toggle_number",
+                    value: e.target.value,
+                    key: "gravelPocet",
+                  });
+                }} />
+                <label> počet kol</label>
+              </InputDiv>
+            </InputDivCol>
+          </FormSectionFlex>
         </FormSection>
         {/* pocet dnu */}
         <FormSection>
@@ -202,7 +225,7 @@ function App() {
         </FormSection>
         {/* nosic */}
         <FormSection>
-          <SectionTitle>Nosič</SectionTitle>
+          <SectionTitle>Nosič:</SectionTitle>
           <div>
             <InputDiv>
               <input type="radio" name="nosic" id="nosicNe" value={1} onClick={(e) => {
@@ -238,19 +261,19 @@ function App() {
         </FormSection>
         <FormSection>
           {/* kalkulace */}
-          <SectionTitle>Konečná kalkulace</SectionTitle>
+          <SectionTitle>Konečná kalkulace:</SectionTitle>
 
           <label>Finální cena:</label>
           <input type="text" id="finalniCena" value={showFinalPrice} disabled />
           <label>Zadejte váš rozpočet:</label>
           <input type="text" id="rozpocet" value={objednavka.rozpocet} onChange={(e) => {
-              dispatch({
-                type: "toggle_number",
-                value: e.target.value,
-                key: "rozpocet",
-              });
-            }}
-           />
+            dispatch({
+              type: "toggle_number",
+              value: e.target.value,
+              key: "rozpocet",
+            });
+          }}
+          />
           {/* kontrola*/}
 
           <KontrolaButton checked={checked} onClick={() => {
@@ -263,7 +286,7 @@ function App() {
           </KontrolaButton>
         </FormSection>
       </Formular>
-    </PageContainer>
+    </PageContainer >
   );
 }
 

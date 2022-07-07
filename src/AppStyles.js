@@ -10,10 +10,9 @@ export const PageContainer = styled.div`
    align-items: center;
 `;
 export const Formular = styled.form`
-   background-color: rgb(19, 51, 61);
-   width: 800px;
+   /* background-color: rgb(19, 51, 61); */
+   /* width: 800px; */
    min-height: 800px;
-   border: 1px solid black;
    padding: 20px;
    display: grid;
    grid-template-columns: 1fr;
@@ -29,7 +28,7 @@ export const FormSection = styled.div`
    display: flex;
    flex-direction: column;
    width: 100%;
-   background-color: lightgray;
+   background-color: rgba(255,255,255,0.5);
    padding: 20px;
    border-radius: 10px;
    &:nth-child(1){
@@ -49,9 +48,20 @@ export const FormSection = styled.div`
    }
 
 `;
+
+export const FormSectionFlex = styled.div`
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   padding: 20px;
+   border-radius: 10px;
+   gap: 10px;
+`;
+
 export const SectionTitle = styled.h2`
    color: black;
    font-size: 20px;
+   font-weight: 800;
    margin: 0px;
    padding: 0;
    padding-bottom: 10px;
@@ -66,6 +76,15 @@ export const InputDiv = styled.div`
    flex-direction: row;
    justify-content: flex-start;
    align-items: center;
+   margin: 5px;
+`;
+
+export const InputDivCol = styled.div`
+   display: flex;
+   width: 180px;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
 `;
 
 export const KontrolaButton = styled.div`
@@ -76,7 +95,7 @@ export const KontrolaButton = styled.div`
     border-radius: 10px;
     cursor: pointer;
     align-content: center;
-    background-color: #505050;
+    background-color: rgba(0,0,0,0.3);
    ${props => {
       if (props.checked == 1) {
          return `
